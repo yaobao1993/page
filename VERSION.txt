@@ -1,0 +1,2 @@
+page-1.0:
+    Create page-1.0
