@@ -1,0 +1,32 @@
+[appendix]
+== Changes since Gun 1.3
+
+The following patch versions were released since Gun 1.3:
+
+=== Gun 1.3.3
+
+This release updates Erlang.mk to include features useful
+to RabbitMQ.
+
+It also updates Cowlib to 2.7.0.
+
+=== Gun 1.3.2
+
+This release backports a fix that will be included in the
+upcoming Gun 2.0 release:
+
+* Gun will now properly identify HTTP/2 preface errors,
+  for example when attempting to connect to an HTTP/1.1
+  server or a non-HTTP server. Gun will give a different
+  error message when it thinks it received an HTTP/1.1
+  response.
+
+=== Gun 1.3.1
+
+This release backports a fix that will be included in the
+upcoming Gun 2.0 release:
+
+* *POTENTIAL SECURITY VULNERABILITY*: Fix transfer-encoding
+  precedence over content-length in responses. This bug may
+  contribute to a response smuggling security vulnerability
+  when Gun is used inside a proxy.
