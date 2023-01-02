@@ -15,7 +15,7 @@ cowboy:
 	@cd $(COWBOY_PATH); $(MAKE)
 cowboy_clean:
 	@echo "Clean Cowboy..."
-	@cd $(COWBOY_PATH); $(MAKE) clean
+	@cd $(COWBOY_PATH); $(MAKE) distclean
 
 GUN_PATH = gun-1.3.3
 gun:
@@ -23,4 +23,4 @@ gun:
 	@cd $(GUN_PATH); $(MAKE)
 gun_clean:
 	@echo "Clean Gun..."
-	@cd $(GUN_PATH); $(MAKE) clean
+	@cd $(GUN_PATH); $(MAKE) distclean
