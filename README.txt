@@ -1,5 +1,5 @@
 Page
 
-Page is a Web solution.
+Page is a web solution.
 
 Read VERSION.txt for version history.
