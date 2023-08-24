@@ -6,8 +6,8 @@ all:
 	@$(MAKE) third
 	@$(MAKE) src
 clean:
-	@$(MAKE) src_clean
 	@$(MAKE) third_clean
+	@$(MAKE) src_clean
 
 third:
 	@cd third; $(MAKE)
