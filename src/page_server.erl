@@ -17,4 +17,5 @@ start(Port) ->
 
 stop() ->
     application:stop(cowboy),
+    application:stop(ranch),
     ok.
