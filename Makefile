@@ -1,4 +1,4 @@
-.PHONY: all clean third third_clean src src_clean
+.PHONY: all clean third third_clean src ebin_clean
 
 MAKE = make
 
@@ -7,7 +7,7 @@ all:
 	@$(MAKE) src
 clean:
 	@$(MAKE) third_clean
-	@$(MAKE) src_clean
+	@$(MAKE) ebin_clean
 
 third:
 	@cd third; $(MAKE)
