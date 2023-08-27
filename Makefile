@@ -15,6 +15,6 @@ third_clean:
 	@cd third; $(MAKE) clean
 
 src:
-	@cd src; erlc *.erl
-src_clean:
-	@cd src; rm -f *.beam
+	@cd src; erlc -o ../ebin *.erl
+ebin_clean:
+	@cd ebin; rm -f *.beam
