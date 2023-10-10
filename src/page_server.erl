@@ -8,7 +8,8 @@ start() ->
 start(Port) ->
     {ok, _} = application:ensure_all_started(cowboy),
     Routes = [
-            {"/static/[...]", cowboy_static, {dir, "../static"}}
+            {"/static/[...]", cowboy_static, {dir, "../static"}},
+            {"/[...]", page_routes, []}
         ],
     Dispatch = cowboy_router:compile([{'_', Routes}]),
     cowboy:start_clear(http, [{port, Port}],
