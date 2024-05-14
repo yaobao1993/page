@@ -1,4 +1,5 @@
 .PHONY: all clean third third_clean build build_clean
+.DEFAULT_GOAL := build
 
 MAKE = make
 
