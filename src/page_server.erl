@@ -3,11 +3,11 @@
 -export([start/1, stop/0]).
 
 start(Config) ->
-    #{port := Port, page_user_module := Page_user_module} = Config,
+    #{port := Port, page_user := Page_user} = Config,
     {ok, _} = application:ensure_all_started(cowboy),
     Routes = [
         {"/static/[...]", cowboy_static, {dir, "../static"}},
-        {"/[...]", page_routes, [Page_user_module]}
+        {"/[...]", page_routes, [Page_user]}
     ],
     Dispatch = cowboy_router:compile([{'_', Routes}]),
     cowboy:start_clear(
